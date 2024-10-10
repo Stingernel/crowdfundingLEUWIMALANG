@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Satu Deskripsi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #4c6c51;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .profile-proyek {
+            background-color: #e9f7ef;
+            padding: 60px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards-section,
+        .development-section,
+        .map-section {
+            margin-top: 30px;
+            padding: 40px 0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .development-section table {
+            background-color: #f8f9fa;
+        }
+
+        .development-section .table th {
+            background-color: #4c6c51;
+            color: white;
+        }
+
+        .status-selesai {
+            background-color: #d4edda;
+        }
+
+        .status-dalam-proses {
+            background-color: #fff3cd;
+        }
+
+        .status-belum-dimulai {
+            background-color: #f8d7da;
+        }
+
+        .map-section h2 {
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #4c6c51;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .btn-light {
+            background-color: #ffffff;
+            border: 1px solid #4c6c51;
+        }
+
+        .btn-light:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://leuwimalang-cisarua.desa.id/">Leuwimalang AgriFund</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="payment.html">Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tujuan.html">Tujuan Proyek</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Cari di sini" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="profile-proyek text-center p-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="image-container">
+                        <img src="img/3.jpg" class="img-fluid rounded" alt="Profil Proyek">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Profil Proyek</h1>
+                    <p class="lead">Pembuatan Terasiring: <br>
+                    <p>Platform ini adalah solusi digital yang menghubungkan petani dengan investor untuk mendukung
+                        pertanian dan meningkatkan akses modal. Melalui platform ini, petani dapat mengajukan pendanaan
+                        untuk proyek atau usaha pertanian mereka, seperti pembelian bibit, peralatan, atau pengembangan
+                        lahan.</p>
+                    </p>
+
+                    <a href="#" class="btn btn-light">Inves</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section py-5">
+        <div class="container">
+            <h2 class="text-center">Galeri Proyek</h2>
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <img src="img/1.jpg" class="img-fluid rounded" alt="Card Image 1">
+                                        </div>
+                                        <h5 class="card-title mt-3">Desc</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <img src="img/3.jpg" class="img-fluid rounded" alt="Card Image 2">
+                                        </div>
+                                        <h5 class="card-title mt-3">Desc</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="image-container">
+                                            <img src="/img/4.jpg" class="img-fluid rounded" alt="Card Image 3">
+                                        </div>
+                                        <h5 class="card-title mt-3">Desc</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- section yang menunjukan perkembangan proyek -->
+    <section class="development-section py-5">
+        <div class="container">
+            <h2 class="text-center">Jadwal Proyek</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Tanggal</th>
+                        <th>Aktivitas</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>01-01-2024</td>
+                        <td>Pembangunan infrastruktur dasar</td>
+                        <td class="status-selesai">Selesai</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>15-01-2024</td>
+                        <td>Penanaman bibit</td>
+                        <td class="status-dalam-proses">Dalam Proses</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>01-02-2024</td>
+                        <td>Pemasangan irigasi</td>
+                        <td class="status-belum-dimulai">Belum Dimulai</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10-02-2024</td>
+                        <td>Pelatihan petani</td>
+                        <td class="status-dalam-proses">Dalam Proses</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2 class="text-center">Lokasi Proyek di Desa Leuwimalang</h2>
+        <div id="map" style="height: 200px; width: 100%;"></div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section py-5 text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 mx-auto">
+                    <h2>Contact Us</h2>
+                    <p>Have questions? Reach out to us!</p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3 bg-dark text-white text-center">
+        <div class="container">
+            <p>&copy; 2024 Bakuhantam. All Rights Reserved.</p>
+            <a href="#" class="text-white">Privacy Policy</a> |
+            <a href="#" class="text-white">Terms of Service</a> |
+            <a href="#" class="text-white">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inisialisasi Peta menggunakan Leaflet
+        var map = L.map('map').setView([-6.6752, 106.8711], 15); // Koordinat Desa Leuwimalang
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker([-6.6752, 106.8711]).addTo(map)
+            .bindPopup('Lokasi Proyek di Desa Leuwimalang.')
+            .openPopup();
+    </script>
+</body>
+
+</html>

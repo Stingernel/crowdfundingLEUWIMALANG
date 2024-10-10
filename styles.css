@@ -1,0 +1,115 @@
+/* styles.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    
+
+  }
+
+  section{
+    padding: 100px 11% 90px;
+  }
+
+
+/* Hero Section */
+
+
+.hero-section {
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/city-1252643_1920.png') no-repeat center center/cover;
+    padding: 60px 0; /* Tambahkan padding untuk ruang yang lebih baik */
+    text-align: center; /* Center the text */
+}
+
+/* Image Container */
+.image-container {
+    height: 200px; /* Maintain a consistent height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Tambahkan animasi untuk efek hover */
+}
+
+.image-profil  {
+    width: 100px;  /* Lebar gambar (atur sesuai kebutuhan) */
+    height: 150px; /* Tinggi gambar harus sama dengan lebar untuk bentuk lingkaran */
+    border-radius: 50%; /* Mengubah gambar menjadi bentuk lingkaran */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi dalam lingkaran */
+}
+
+
+
+.image-container:hover {
+    transform: scale(1.05); /* Zoom effect saat hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Tambahkan shadow */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Transisi untuk gambar */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Efek zoom pada gambar */
+}
+
+/* Cards Section */
+.cards-section .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.)
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Footer */
+footer {
+    background-color: #4c6c51;
+    color: white;
+    padding: 20px 0; /* Tambahkan padding untuk ruang yang lebih baik */
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #4c6c51;
+    padding: 40px 0; /* Tambahkan padding untuk ruang yang lebih baik */
+}
+
+/* Carousel Styles */
+#galleryCarousel {
+    cursor: grab;
+    overflow: hidden; /* Prevent scrolling outside the carousel */
+}
+
+#galleryCarousel.active {
+    cursor: grabbing;
+}
+
+.carousel-inner {
+    display: flex; /* Align items in a row */
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+/* Button Styles */
+.btn-success {
+    transition: background-color 0.3s, transform 0.2s; /* Tambahkan transisi */
+}
+
+.btn-success:hover {
+    background-color: #28a745; /* Warna hover yang lebih cerah */
+    transform: scale(1.05); /* Efek zoom pada tombol */
+}
